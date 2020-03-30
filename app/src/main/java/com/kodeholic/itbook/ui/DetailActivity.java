@@ -209,10 +209,10 @@ public class DetailActivity extends AppCompatActivity implements IBase, View.OnC
         boolean isBookmark = BookManager.getInstance(mContext).isBookmark(mDetail.getIsbn13());
         Log.d(TAG, "updateView() - isBookmark: " + isBookmark);
         if (!isBookmark) {
-            tv_bookmark.setText("Add Bookmark");
+            tv_bookmark.setText("Add BookmarkActivity");
         }
         else {
-            tv_bookmark.setText("Remove Bookmark");
+            tv_bookmark.setText("Remove BookmarkActivity");
         }
 
         //이미지를 view에 붙인다.
@@ -269,11 +269,11 @@ public class DetailActivity extends AppCompatActivity implements IBase, View.OnC
             case R.id.tv_bookmark:
                 if (!BookManager.getInstance(mContext).isBookmark(mDetail.getIsbn13())) {
                     BookManager.getInstance(mContext).putBookmark(mDetail, TAG);
-                    PopupManager.getInstance(mContext).showToast("Bookmark Added");
+                    PopupManager.getInstance(mContext).showToast("BookmarkActivity Added");
                 }
                 else {
                     BookManager.getInstance(mContext).delBookmark(mDetail.getIsbn13(), TAG);
-                    PopupManager.getInstance(mContext).showToast("Bookmark Removed");
+                    PopupManager.getInstance(mContext).showToast("BookmarkActivity Removed");
                 }
                 updateView("tv_bookmark");
                 break;

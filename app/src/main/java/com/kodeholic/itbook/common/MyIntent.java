@@ -10,6 +10,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.kodeholic.itbook.common.data.BookDetail;
 import com.kodeholic.itbook.lib.util.JSUtil;
 import com.kodeholic.itbook.lib.util.Log;
+import com.kodeholic.itbook.ui.BookmarkActivity;
 import com.kodeholic.itbook.ui.DetailActivity;
 
 import java.util.Iterator;
@@ -131,7 +132,7 @@ public class MyIntent {
      * Detail Event를 전송한다.
      * @param context
      * @param event
-     * @param detail
+     * @param isbn13
      * @param f
      * @return
      */
@@ -150,6 +151,31 @@ public class MyIntent {
         intent.putExtra(Extra.EVENT, event);
         intent.putExtra(Extra.BOOK_DETAIL, JSUtil.json2String(detail));
         show(TAG, "startDetailActivity()", intent);
+        context.startActivity(intent);
+    }
+
+    /**
+     * Bookmark Activity를 실행한다.
+     * @param context
+     * @param event
+     * @param isbn13
+     * @param f
+     */
+    public static void startBookmarkActivity(Context context, int event, String isbn13, String f) {
+        Log.d(TAG, "startBookmarkActivity() - f: " + f + ", event: " + event + ", isbn13: " + isbn13);
+
+        //TODO - Note가 갱신된 경우, 이에 대한 반영이 필요함.
+        BookDetail detail = BookManager.getInstance(context).getDetail(isbn13);
+        if (detail == null) {
+            Log.e(TAG, "startBookmarkActivity() - BookDetail not found!");
+            return;
+        }
+
+        Intent intent = new Intent(context, BookmarkActivity.class);
+        intent.setAction(Action.DETAIL_ACTION);
+        intent.putExtra(Extra.EVENT, event);
+        intent.putExtra(Extra.BOOK_DETAIL, JSUtil.json2String(detail));
+        show(TAG, "startBookmarkActivity()", intent);
         context.startActivity(intent);
     }
 

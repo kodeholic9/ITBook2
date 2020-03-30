@@ -53,7 +53,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             2) [Detail Book]: 서적 리스트 중 선택된 서적의 상세 정보를 보여준다.
             - JSON으로 넘어오는 모든 정보(이미지 포함)를 보여주어야 한다.
             - 북마크를 설정할 수 있는 버튼이 존재한다.
-            - 북마크 버튼을 누르면 [Bookmark] 리스트에 추가되고, 다시 선택하면 [Bookmark] 리스트에서
+            - 북마크 버튼을 누르면 [BookmarkActivity] 리스트에 추가되고, 다시 선택하면 [BookmarkActivity] 리스트에서
             삭제된다.
             - 북마크 기능은 앱 실행 중에만 동작하면 된다. (즉, 앱 재실행시 기존 정보가 저장되어 있을
             필요는 없다.)
@@ -76,7 +76,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             new TabInfo(SECTIONS_SEARCH, R.string.tab_text_2),
 
             /*
-            4) [Bookmark]: [Detail Book] 화면에서 선택된 북마크들을 모아서 리스트로 보여준다.
+            4) [BookmarkActivity]: [Detail Book] 화면에서 선택된 북마크들을 모아서 리스트로 보여준다.
             - [New]나 [Search]에서 보여준 모든 정보(이미지 포함)를 보여주어야 한다.
             - [추가 과제] 정렬 방식을 선택할 수 있다.
             - [추가 과제] 리스트를 편집할 수 있다.
@@ -105,7 +105,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             2) [Detail Book]: 서적 리스트 중 선택된 서적의 상세 정보를 보여준다.
             - JSON으로 넘어오는 모든 정보(이미지 포함)를 보여주어야 한다.
             - 북마크를 설정할 수 있는 버튼이 존재한다.
-            - 북마크 버튼을 누르면 [Bookmark] 리스트에 추가되고, 다시 선택하면 [Bookmark] 리스트에서
+            - 북마크 버튼을 누르면 [BookmarkActivity] 리스트에 추가되고, 다시 선택하면 [BookmarkActivity] 리스트에서
             삭제된다.
             - 북마크 기능은 앱 실행 중에만 동작하면 된다. (즉, 앱 재실행시 기존 정보가 저장되어 있을
             필요는 없다.)
@@ -128,7 +128,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             R.string.tab_text_2,
 
             /*
-            4) [Bookmark]: [Detail Book] 화면에서 선택된 북마크들을 모아서 리스트로 보여준다.
+            4) [BookmarkActivity]: [Detail Book] 화면에서 선택된 북마크들을 모아서 리스트로 보여준다.
             - [New]나 [Search]에서 보여준 모든 정보(이미지 포함)를 보여주어야 한다.
             - [추가 과제] 정렬 방식을 선택할 수 있다.
             - [추가 과제] 리스트를 편집할 수 있다.

@@ -148,7 +148,7 @@ public class SectionBookmarkFragment extends SectionFragment {
                     Log.d(TAG, "onClick() - view: " + v + ", position: " + position + ", " + item);
 
                     //detail 화면으로 이동한다.
-                    MyIntent.startDetailActivity(mContext, MyIntent.Event.DETAIL_REFRESHED, item.getIsbn13(), TAG);
+                    MyIntent.startBookmarkActivity(mContext, MyIntent.Event.DETAIL_REFRESHED, item.getIsbn13(), TAG);
                 }
             });
             holder.rowView.setOnLongClickListener(new View.OnLongClickListener() {

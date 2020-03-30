@@ -389,7 +389,7 @@ public class SectionSearchFragment extends SectionFragment {
                                 PopupManager.getInstance(mContext).showToast("Failed to load detail!");
                                 return;
                             }
-                            MyIntent.startDetailActivity(mContext, MyIntent.Event.DETAIL_REFRESHED, result.getIsbn13(), TAG);
+                            MyIntent.startBookmarkActivity(mContext, MyIntent.Event.DETAIL_REFRESHED, result.getIsbn13(), TAG);
                         }
                     }, TAG);
                 }

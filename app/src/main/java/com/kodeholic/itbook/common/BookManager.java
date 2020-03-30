@@ -659,7 +659,7 @@ public class BookManager {
                     PopupManager.getInstance(mContext).showToast("Failed to load detail!");
                     return;
                 }
-                MyIntent.startDetailActivity(mContext, MyIntent.Event.DETAIL_REFRESHED, result.getIsbn13(), TAG);
+                MyIntent.startBookmarkActivity(mContext, MyIntent.Event.DETAIL_REFRESHED, result.getIsbn13(), TAG);
             }
         }, TAG);
     }
@@ -701,14 +701,14 @@ public class BookManager {
 
     ///////////////////////////////////////////////////////////////////////////
     //
-    // Bookmark 기능을 제공한다.
+    // BookmarkActivity 기능을 제공한다.
     //
     ///////////////////////////////////////////////////////////////////////////
     private List<Bookmark> mBookmarkList = new ArrayList<>();
     private HashMap<String, Bookmark> mBookmarkHash = new HashMap<>();
 
     /**
-     * Bookmark 정보를 로드한다.
+     * BookmarkActivity 정보를 로드한다.
      * @param f
      */
     public void loadBookmark(String f) {

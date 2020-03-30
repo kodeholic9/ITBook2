@@ -46,7 +46,7 @@ public class Bookmark extends BookDetail {
 
     @Override
     public String toString() {
-        return "Bookmark{" +
+        return "BookmarkActivity{" +
                 "order=" + order +
                 "} " + super.toString();
     }
